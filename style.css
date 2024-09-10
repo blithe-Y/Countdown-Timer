@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    min-height: 75px;
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+    background-color: pink;
+    z-index: 999;
+
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+    }
+}
+
+.logo {
+    width: 4vw;
+}
+
+@media (max-width: 650px) {
+    .logo {
+        margin: 15px auto;
+        width: 30%;
+        position: relative;
+
+    }
+}
+
+.logo > img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+}
+
+@media (max-width: 650px) {
+    .logo > img {
+        display: none;
+    }
+}
+
+nav {
+    font-weight: 400;
+}
+
+@media (max-width: 650px) {
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+    nav li {
+        padding-bottom: 5px;
+    }
+}
+
+nav > ul {
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media (max-width: 650px) {
+    nav > ul {
+        flex-direction: column;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: blanchedalmond;
+    position: relative;
+}
+
+.box-left {
+    position: absolute;
+    left: 60px;
+    top: 100px;
+    width: 43%;
+    height: 80vh;
+    background-color: skyblue;
+}
+
+.box-right {
+    position: absolute;
+    right: 60px;
+    top: 100px;
+    width: 43%;
+    height: 80vh;
+    background-color: skyblue;
+}

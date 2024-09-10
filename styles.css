@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffe6e9; /* 柔和的粉红色背景 */
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    min-height: 75px;
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffe6e9 ; /* 柔和的粉色 */
+    z-index: 999;
+}
+
+.logo {
+    width: 4vw;
+}
+
+.logo > img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    margin-left: 20px;
+}
+
+nav > ul {
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #f1edff; /* 非常淡的粉红色背景 */
+    position: relative;
+}
+
+.box-left, .box-right {
+    position: absolute;
+    top: 100px;
+    width: 43%;
+    height: 80vh;
+    background-color: #fff0f5; /* 淡粉色盒子背景 */
+    padding: 20px;
+    overflow-y: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.box-left {
+    left: 60px;
+}
+
+/* Box-right container */
+/* Box-right container */
+.box-right {
+    position: absolute; /* 确保它相对于父容器定位 */
+    top: 100px; /* 这个是你之前的代码，如果需要可调 */
+    right: 60px;
+    width: 43%;
+    height: 80vh; /* 确保高度足够 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    flex-direction: column;
+    background-color: #fafafa;
+    padding: 20px;
+    overflow-y: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+    width: 80%; /* 设定宽度 */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    margin: auto; /* 确保 form 在父容器中居中 */
+}
+
+
+/* Input fields styling */
+form div {
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffb6c1; /* 淡粉红色边框 */
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="datetime-local"]:focus {
+    border-color: #ff69b4; /* 深粉色聚焦边框 */
+    outline: none;
+}
+
+/* Button styling */
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff99c8; /* 按钮浅粉色 */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form button:hover {
+    background-color: #ff6699; /* 悬停时的深粉色 */
+}
+
+/* Form header text */
+form div:first-of-type {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+form div label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ff69b4; /* 标签粉色字体 */
+}
+
+h1{
+    text-align: center;
+}
+
+/* 事件容器 */
+.event-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ffb6c1;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+/* 事件详情，左对齐 */
+.event-details {
+    flex-grow: 1;
+}
+
+/* 编辑和删除按钮容器 */
+.event-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* 编辑按钮 */
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* 编辑按钮颜色 */
+.edit-btn {
+    background-color: #ff99c8;
+}
+
+.edit-btn:hover {
+    background-color: #ff6699;
+}
+
+/* 删除按钮颜色 */
+.delete-btn {
+    background-color: #ff6f61;
+}
+
+.delete-btn:hover {
+    background-color: #ff4444;
+}
+

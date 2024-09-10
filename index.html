@@ -2,9 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Countdown-Timer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<header id="header">
+    <div class="logo">
+        <img src="heart.png" id="header-img" alt="Logo">
+    </div>
+    <nav id="nav-bar">
+        <ul>
+            <li><a class="nav-link" href="#" id="add-new">ADD NEW</a></li>
+            <li><a class="nav-link" href="#">OTHERS</a></li>
+        </ul>
+    </nav>
+</header>
 
+<div class="container">
+    <div class="box-left">
+        <h1>事件清单</h1>
+<!--        <div class="event-list">-->
+<!--            <div class="event-details">-->
+<!--                <span>事件名称：Event 1</span>-->
+<!--                <br>-->
+<!--                <span>倒计时：10 days, 5 hours, 20 minutes</span>-->
+<!--            </div>-->
+<!--            <div class="event-actions">-->
+<!--                <button class="edit-btn">编辑</button>-->
+<!--                <button class="delete-btn">删除</button>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+    <div class="box-right" id="event-add">
+        <h1>新增事件</h1>
+        <form>
+            <div>请输入事件名称：<input type="text" id="event" required></div>
+            <div>
+                请输入计划发生时间：
+                <input
+                        id="event-date"
+                        type="datetime-local"
+                        name="event-date"
+                        value="2025-06-01T00:00"
+                        required
+                />
+            </div>
+            <div>
+                <button type="submit">开始</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
